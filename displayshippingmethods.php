@@ -93,7 +93,6 @@ class Displayshippingmethods extends Module
         $sql = 'SELECT a.* , b.* FROM `ps_carrier` a INNER JOIN `ps_carrier_lang` b ON a.id_carrier = b.id_carrier AND b.id_shop = 1 AND b.id_lang = 2 LEFT JOIN `ps_carrier_tax_rules_group_shop` ctrgs ON (a.`id_carrier` = ctrgs.`id_carrier` AND ctrgs.id_shop=1) WHERE 1 AND a.`deleted` = 0 ORDER BY a.`position` ASC LIMIT 0, 50';
         $shipping_methods_query = Db::getInstance()->ExecuteS($sql);
         array_pop($shipping_methods_query);
-        $shipping_methods_query[0]["name"] = "";
         $this->context->smarty->assign([
             'shipping_methods_title' => $this->trans('SHIPPING METHODS', [], 'Modules.Displayshippingmethods.Title'),
             'shipping_methods_list' => $shipping_methods_query,

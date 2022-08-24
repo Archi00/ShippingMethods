@@ -16,7 +16,7 @@
                 <div id="shipping-methods" class="collapse">
                     <ul>
                         {foreach $shipping_methods_list as $carrier}
-                        <li><img src={"/Botiga/img/s/"|cat:$carrier["id_carrier"]|cat:".jpg"}  width="35" alt="logo"> {$carrier["name"]} {if $carrier["name"]}-{/if} {$carrier["delay"]}</li>
+                        <li><img src={"/Botiga/img/s/"|cat:$carrier["id_carrier"]|cat:".jpg"}  width="35" alt="logo"> {$carrier["name"]|escape:'html':'UTF-8'}</li>
                         {/foreach}
                     </ul>
                 </div>
