@@ -28,14 +28,14 @@
 
 const shippingMethodsTarget = document.querySelector("#shipping-methods-target")
 const shippingMethodsContent = document.querySelector("#shipping-methods")
-target.onclick = () => {
-    if (target.ariaExpanded === "false") {
-        target.ariaExpanded = "true"
-        content.ariaExpanded = "true"
-        content.classList.add("in")
+tashippingMethodsTarget.onclick = () => {
+    if (tashippingMethodsTarget.ariaExpanded === "false") {
+        tashippingMethodsTarget.ariaExpanded = "true"
+        shippingMethodsContent.ariaExpanded = "true"
+        shippingMethodsContent.classList.add("in")
     } else {
-        target.ariaExpanded = "false"
-        content.ariaExpanded = "false"
-        content.classList.remove("in")
+        shippingMethodsTarget.ariaExpanded = "false"
+        shippingMethodsContent.ariaExpanded = "false"
+        shippingMethodsContent.classList.remove("in")
     }
 }
