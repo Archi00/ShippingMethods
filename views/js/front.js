@@ -28,9 +28,9 @@
 
 const shippingMethodsTarget = document.querySelector("#shipping-methods-target")
 const shippingMethodsContent = document.querySelector("#shipping-methods")
-tashippingMethodsTarget.onclick = () => {
-    if (tashippingMethodsTarget.ariaExpanded === "false") {
-        tashippingMethodsTarget.ariaExpanded = "true"
+shippingMethodsTarget.onclick = () => {
+    if (shippingMethodsTarget.ariaExpanded === "false") {
+        shippingMethodsTarget.ariaExpanded = "true"
         shippingMethodsContent.ariaExpanded = "true"
         shippingMethodsContent.classList.add("in")
     } else {
