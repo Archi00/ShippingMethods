@@ -26,16 +26,3 @@
 * to avoid any conflicts with others containers.
 */
 
-const shippingMethodsTarget = document.querySelector("#shipping-methods-target")
-const shippingMethodsContent = document.querySelector("#shipping-methods")
-shippingMethodsTarget.onclick = () => {
-    if (shippingMethodsTarget.ariaExpanded === "false") {
-        shippingMethodsTarget.ariaExpanded = "true"
-        shippingMethodsContent.ariaExpanded = "true"
-        shippingMethodsContent.classList.add("in")
-    } else {
-        shippingMethodsTarget.ariaExpanded = "false"
-        shippingMethodsContent.ariaExpanded = "false"
-        shippingMethodsContent.classList.remove("in")
-    }
-}
